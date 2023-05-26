@@ -86,7 +86,7 @@ class CodingmoreMybatisApplicationTests {
 	@Test
 	void testPostDelete() {
 		log.info("删除前{}", postMapper.getAll().toArray());
-		postMapper.delete(1L);
+		postMapper.delete(19L);
 		log.info("删除后{}", postMapper.getAll().toArray());
 
 	}

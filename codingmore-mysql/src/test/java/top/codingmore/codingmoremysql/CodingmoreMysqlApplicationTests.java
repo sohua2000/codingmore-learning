@@ -31,8 +31,8 @@ class CodingmoreMysqlApplicationTests {
         System.out.println(connection);
 
         DruidDataSource druidDataSource = (DruidDataSource) dataSource;
-        System.out.println("druidDataSource 数据源最大连接数：" + druidDataSource.getMaxActive());
-        System.out.println("druidDataSource 数据源初始化连接数：" + druidDataSource.getInitialSize());
+        System.out.println("druidDataSource getMaxActive:" + druidDataSource.getMaxActive());
+        System.out.println("druidDataSource getInitialSize:" + druidDataSource.getInitialSize());
 
         //关闭连接
         connection.close();

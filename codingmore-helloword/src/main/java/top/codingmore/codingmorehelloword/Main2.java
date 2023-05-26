@@ -4,8 +4,11 @@ import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import top.codingmore.codingmorehelloword.redis.RedisTest;
 
 import java.util.stream.IntStream;
+
+import static top.codingmore.codingmorehelloword.redis.RedisTest.test;
 
 public class Main2 {
     static final Log log2 = LogFactory.getLog(Main.class);
@@ -23,6 +26,8 @@ public class Main2 {
         logger.info("slf4j-foo");
 
         testStream();
+
+        test();
 
 
     }
