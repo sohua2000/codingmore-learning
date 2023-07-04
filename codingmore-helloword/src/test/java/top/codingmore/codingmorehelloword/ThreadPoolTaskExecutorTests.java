@@ -35,7 +35,7 @@ public class ThreadPoolTaskExecutorTests {
     }
 
     @Autowired
-    private ThreadPoolTaskExecutor taskExecutor;
+    private ThreadPoolTaskExecutor taskExecutor1;
 
     @Test
     public void contextLoads() {
@@ -43,7 +43,7 @@ public class ThreadPoolTaskExecutorTests {
         long start = System.currentTimeMillis();
         for (int i = 1; i <= 8; i++) {
             try {
-                taskExecutor.execute(new MyTask(i, countDownLatch));
+                taskExecutor1.execute(new MyTask(i, countDownLatch));
             } catch (Exception e) {
                 e.printStackTrace();
             }

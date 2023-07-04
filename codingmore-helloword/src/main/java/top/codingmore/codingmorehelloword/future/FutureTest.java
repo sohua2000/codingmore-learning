@@ -5,9 +5,10 @@ import java.util.concurrent.*;
 public class FutureTest {
     public static void main(String[] args) {
         //创建线程池
-        ExecutorService executor = Executors.newCachedThreadPool();
+        ExecutorService executor = Executors.newCachedThreadPool();//该线程池 keepAliveTime 为60秒，所以在60秒后如果线程空闲则会被回收
         //线程池提交任务异步任务(接收 Callable 对象)  doSomeLongComputation
         Future<String> future = executor.submit(new Callable<String>() {
+//        Future<String> future = executor(new Callable<String>() {
             public String call() {
                 try {
                     Thread.sleep(500);
@@ -34,5 +35,6 @@ public class FutureTest {
             te.printStackTrace();
         }
         System.out.println(Thread.currentThread().getName() + "执行结束");
+//        executor.shutdown();//该线程池 keepAliveTime 为60秒，所以在60秒后如果线程空闲则会被回收
     }
 }
